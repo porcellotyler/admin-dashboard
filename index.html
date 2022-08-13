@@ -8,81 +8,37 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <!-- pseudocode structure
-       div container grid [3 columns 3 rows]
-            div sidebar flexbox [column], spans all rows of parent grid 
-                10 divs logo + text
-            div nav grid [1 column 2 rows]
-                div search flexbox [row] spans from column 2-4 & row 1-2 of parent grid
-                    img logo
-                    form text input flex-shrink:1(?)
-                    img logo
-                    img userlogo
-                    p username
-                div interact grid [2 columns 1 row]
-                    div greet justify-self start
-                        img userlogo
-                        p text
-                        h1(?) username + @
-                    div buttons flexbox [row]
-                        3 buttons
-            div content 
-                div projects grid [1 column 2 rows] spans columns 2-3 & row 2-4 of parent grid
-                    p header
-                    6 divs grid [4 columns 2 rows]
-                        h1 + p spans all columns & row 1-2 of parent grid
-                        3 imgs spans columns 2-5 & row 2-3 of parent grid
-                div announcements flexbox [column] spans columns 3-4 & row 2-3 of parent grid
-                    p header
-                    3 divs
-                        h1 + p
-                div trending flexbox [column] spans columns 3-4 & row 3-4 of parent grid
-                    p header
-                    4 divs
-                        img + h1 + p
-    -->
     <div class="container">
         <div class="sidebar">
-            <div>
-                <img class="logo" src="images/monitor-dashboard.svg"  alt="Monitor with dashboard">
-                Dashboard
-            </div>
-            <div>
-                <img src="images/home-outline.svg" alt="Home">
-                Home
-            </div>
-            <div>
-                <img src="images/card-account-details-outline.svg" alt="Profile Card">
-                Profile
-            </div>
-            <div>
-                <img src="images/message-reply-outline.svg" alt="Message outline">
-                Messages
-            </div>
-            <div>
-                <img src="images/clock-time-three.svg" alt="Clock">
-                History
-            </div>
-            <div>
-                <img src="images/file-multiple.svg" alt="Multiple files">
-                Tasks
-            </div>
-            <div>
-                <img src="images/account-group.svg" alt="People">
-                Communities
-            </div>
-            <div>
-                <img src="images/cog.svg" alt="Gear / cog">
-                Settings
-            </div>
-            <div>
-                <img src="images/help-box.svg" alt="Help box">
-                Support
-            </div>
-            <div>
-                <img src="images/shield-check.svg" alt="Shield with check">
-                Privacy
-            </div>
+            <img class="logo" src="images/monitor-dashboard.svg"  alt="Monitor with dashboard">
+            <div class="dashboard" >Dashboard</div>
+
+            <img src="images/home-outline.svg" alt="Home">
+            <div>Home</div>
+            
+            <img src="images/card-account-details-outline.svg" alt="Profile Card">
+            <div>Profile</div>
+
+            <img src="images/message-reply-outline.svg" alt="Message outline">
+            <div>Messages</div>
+            
+            <img src="images/clock-time-three.svg" alt="Clock">
+            <div>History</div>
+
+            <img src="images/file-multiple.svg" alt="Multiple files">
+            <div>Tasks</div>
+
+            <img class="communities" src="images/account-group.svg" alt="People">
+            <div class="communities">Communities</div>
+
+            <img src="images/cog.svg" alt="Gear / cog">
+            <div>Settings</div>
+
+            <img src="images/help-box.svg" alt="Help box">
+            <div>Support</div>
+
+            <img src="images/shield-check.svg" alt="Shield with check">
+            <div>Privacy</div>
         </div>
         <div class="header">
             <div class="search">
@@ -91,20 +47,20 @@
                 <form>
                     <input type="text">
                 </form>
-
+   
                 <img src="images/bell-ring-outline.svg" alt="Bell ringing">
+                    
+                <img id="profilePicture" src="images/smiling_smiley_yellow_simple.svg" alt="Smiely face">
                 
-                <img src="images/smiling_smiley_yellow_simple.svg" alt="Smiely face">
-                
-                <p>John Appleseed</p>
+                <p>Artschool Cowboy</p>
             </div>
             <div class="interactUser">
                 <div class="greet">
                     <img src="images/smiling_smiley_yellow_simple.svg" alt="Smiely face">
-
-                    <p>Hello there,</p>
-
-                    <h3>John Appleseed (@apples)</h3>
+                    <div class="hiThere">
+                    <p>Hi there,</p>
+                    <h3>Artschool Cowboy (@asc)</h3>
+                    </div>
                 </div>
                 <div class="buttonHolder">
                     <button>New</button>
@@ -116,70 +72,80 @@
         <div class="mainContent">
             <h5 id="pTitle">Your Projects</h5>
             <div class="projects">
-                <!--had h5 title here but trying flexbox now-->
                 <div class="card">
                     <h5>test card title</h5>
                     <p>this is whats inside of the card it will probably be much longer than the title which is why im typing so much hehehe</p>
-                    <img src="images/star-plus-outline.svg" alt="Star with plus sign">
-                    <img src="images/eye-plus-outline.svg" alt="Eye with plus sign">
-                    <img src="images/source-fork.svg" alt="Source fork">
+                    <div class="cardImages">
+                        <img src="images/star-plus-outline.svg" alt="Star with plus sign">
+                        <img src="images/eye-plus-outline.svg" alt="Eye with plus sign">
+                        <img src="images/source-fork.svg" alt="Source fork">
+                    </div>
                 </div>
                 <div class="card">
                     <h5>test card title</h5>
                     <p>this is whats inside of the card it will probably be much longer than the title which is why im typing so much hehehe</p>
-                    <img src="images/star-plus-outline.svg" alt="Star with plus sign">
-                    <img src="images/eye-plus-outline.svg" alt="Eye with plus sign">
-                    <img src="images/source-fork.svg" alt="Source fork">
+                    <div class="cardImages">
+                        <img src="images/star-plus-outline.svg" alt="Star with plus sign">
+                        <img src="images/eye-plus-outline.svg" alt="Eye with plus sign">
+                        <img src="images/source-fork.svg" alt="Source fork">
+                    </div>
                 </div>
                 <div class="card">
                     <h5>test card title</h5>
                     <p>this is whats inside of the card it will probably be much longer than the title which is why im typing so much hehehe</p>
-                    <img src="images/star-plus-outline.svg" alt="Star with plus sign">
-                    <img src="images/eye-plus-outline.svg" alt="Eye with plus sign">
-                    <img src="images/source-fork.svg" alt="Source fork">
+                    <div class="cardImages">
+                        <img src="images/star-plus-outline.svg" alt="Star with plus sign">
+                        <img src="images/eye-plus-outline.svg" alt="Eye with plus sign">
+                        <img src="images/source-fork.svg" alt="Source fork">
+                    </div>
                 </div>
                 <div class="card">
                     <h5>test card title</h5>
                     <p>this is whats inside of the card it will probably be much longer than the title which is why im typing so much hehehe</p>
-                    <img src="images/star-plus-outline.svg" alt="Star with plus sign">
-                    <img src="images/eye-plus-outline.svg" alt="Eye with plus sign">
-                    <img src="images/source-fork.svg" alt="Source fork">
+                    <div class="cardImages">
+                        <img src="images/star-plus-outline.svg" alt="Star with plus sign">
+                        <img src="images/eye-plus-outline.svg" alt="Eye with plus sign">
+                        <img src="images/source-fork.svg" alt="Source fork">
+                    </div>
                 </div>
                 <div class="card">
                     <h5>test card title</h5>
                     <p>this is whats inside of the card it will probably be much longer than the title which is why im typing so much hehehe</p>
-                    <img src="images/star-plus-outline.svg" alt="Star with plus sign">
-                    <img src="images/eye-plus-outline.svg" alt="Eye with plus sign">
-                    <img src="images/source-fork.svg" alt="Source fork">
+                    <div class="cardImages">
+                        <img src="images/star-plus-outline.svg" alt="Star with plus sign">
+                        <img src="images/eye-plus-outline.svg" alt="Eye with plus sign">
+                        <img src="images/source-fork.svg" alt="Source fork">
+                    </div>
                 </div>
                 <div class="card">
                     <h5>test card title</h5>
                     <p>this is whats inside of the card it will probably be much longer than the title which is why im typing so much hehehe</p>
-                    <img src="images/star-plus-outline.svg" alt="Star with plus sign">
-                    <img src="images/eye-plus-outline.svg" alt="Eye with plus sign">
-                    <img src="images/source-fork.svg" alt="Source fork">
+                    <div class="cardImages">
+                        <img src="images/star-plus-outline.svg" alt="Star with plus sign">
+                        <img src="images/eye-plus-outline.svg" alt="Eye with plus sign">
+                        <img src="images/source-fork.svg" alt="Source fork">
+                    </div>
+                </div>
+
+            </div>
+
+            <h5 id="aTitle">
+                Announcements
+            </h5>
+            <div class="announcements">
+                <div id="notBottomAnnouncement">
+                    <h5>Site Maintenance</h5>
+                    <p>Probably gotta work on something here because I'm still learning as I build.</p>
                 </div>
                 
-            </div>
-            <h5 id="aTitle">Announcements</h5>
-            <div class="announcements">
-                <div>
-                    <h6>
-                        Site Maintenance
-                    </h6>
-                    Probably gotta work on something here because I'm still learning as I build.
+                <div id="notBottomAnnouncement">
+                    <h5>Community Share Day</h5>
+                    <p>Celebrities, what do they know? Do they know things? Let's find out! - Mr. PB</p>
                 </div>
+
                 <div>
-                    <h6>
-                        Community Share Day
-                    </h6>
-                    Celebrities, what do they know? Do they know things? Let's find out! - Mr. PB
-                </div>
-                <div>
-                    <h6>
-                        Updated Privacy Policy
-                    </h6>
-                    Yeah, we're collecting ALL your data. It helps me figure out how to build this better.
+                    <h5>Updated Privacy Policy</h5>
+                    <p>Yeah, we're collecting ALL your data. It helps me figure out how to build this better.</p>
                 </div>
             </div>
             <h5 id="tTitle">Trending</h5>
@@ -187,7 +153,7 @@
                 <div class="people">
                     <img src="images/usm.svg" alt="USM Haller Logo">
                     @usmhaller<br>
-                    We love artschoolcowboy!
+                    We love asc!
                 </div>
                 <div class="people">
                     <img src="images/met.svg" alt="The MET">
@@ -196,8 +162,8 @@
                 </div>
                 <div class="people">
                     <img src="images/smiling_smiley_yellow_simple.svg" alt="Smiely face">
-                    @apples<br>
-                    Artschool Cowboy
+                    @asc<br>
+                    #ArtschoolCowboy
                 </div>
                 <div class="people">
                     <img src="images/UFC_Logo.svg" alt="UFC Logo">
